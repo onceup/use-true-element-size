@@ -4,13 +4,20 @@ export const useTrueElementSize = (elementRef: RefObject<HTMLElement>) => {
   const [elementWidth, setElementWidth] = useState<number>(0);
   const [elementHeight, setElementHeight] = useState<number>(0);
 
-  const observer = useRef<ResizeObserver>(
+  let observer = useRef<ResizeObserver>(
     new ResizeObserver((entries) => {
-      const { width, height } = entries[0].contentRect;
-      setElementWidth(width);
-      setElementHeight(height);
+      const { clientWidth, clientHeight } = entries[0].target;
+
+      setElementWidth(clientWidth);
+      setElementHeight(clientHeight);
     })
   );
+
+  useEffect(() => {
+    if (!elementRef.current || elementHeight || elementWidth) return;
+
+    observer.current.observe(elementRef.current);
+  });
 
   useEffect(() => {
     if (elementRef.current) {
