@@ -12,6 +12,7 @@ JavaScript:
 
 ```jsx
 import { useRef } from 'react';
+import { useTrueElementSize } from 'use-true-element-size';
 
 const Example = () => {
   const divRef = useRef(null);
@@ -30,6 +31,7 @@ TypeScript:
 
 ```tsx
 import { useRef } from 'react';
+import { useTrueElementSize } from 'use-true-element-size';
 
 const Example = () => {
   const divRef = useRef<HTMLDivElement>(null);
