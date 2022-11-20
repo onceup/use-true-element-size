@@ -1,6 +1,6 @@
 {
   "name": "use-true-element-size",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "A simple and versatile use hook to track for the DOM-element sizes (width and height)",
   "author": "https://github.com/onceup",
   "license": "MIT",
