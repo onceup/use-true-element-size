@@ -75,6 +75,4 @@ yarn add use-true-element-size
 
 ## License
 
-```
 MIT © [https://github.com/onceup](https://github.com/https://github.com/onceup)
-```
